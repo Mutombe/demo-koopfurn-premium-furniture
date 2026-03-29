@@ -1,40 +1,66 @@
-import React, { useEffect } from 'react';
-import { Phone, WhatsappLogo, FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react';
+import React, { useState, useEffect } from 'react';
+import { X } from '@phosphor-icons/react';
 
 function DemoBanner() {
+  const [dismissed, setDismissed] = useState(false);
+
   useEffect(() => {
-    const el = document.getElementById('demo-banner');
-    if (el) document.documentElement.style.setProperty('--banner-height', el.offsetHeight + 'px');
-    const onResize = () => {
-      const el2 = document.getElementById('demo-banner');
-      if (el2) document.documentElement.style.setProperty('--banner-height', el2.offsetHeight + 'px');
+    const updateHeight = () => {
+      const el = document.getElementById('demo-banner');
+      if (el && !dismissed) {
+        document.documentElement.style.setProperty('--banner-height', el.offsetHeight + 'px');
+      } else {
+        document.documentElement.style.setProperty('--banner-height', '0px');
+      }
     };
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, []);
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, [dismissed]);
+
+  if (dismissed) return null;
 
   return (
-    <div id="demo-banner" className="relative z-[60] text-xs" style={{ backgroundColor: '#000000', color: '#d4d4d4', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-1.5 flex items-center justify-between">
-        {/* Left - Phone (desktop) */}
-        <div className="hidden sm:flex items-center gap-4">
-          <a href="tel:+27818337553" className="flex items-center gap-1.5 text-gray-400 hover:text-white transition-colors"><Phone size={13} weight="bold" /><span>+27818337553</span></a>
-        </div>
-
-        {/* Center - Phone (mobile) */}
-        <div className="sm:hidden flex items-center gap-2">
-          <a href="tel:+27818337553" className="flex items-center gap-1 text-gray-400"><Phone size={12} weight="bold" /><span className="text-[11px]">+27818337553</span></a>
-        </div>
-
-        {/* Right - Socials */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors" aria-label="Facebook"><FacebookLogo size={14} weight="bold" /></a>
-          <a href="https://wa.me/27818337553" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-green-400 transition-colors" aria-label="WhatsApp"><WhatsappLogo size={14} weight="bold" /></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-400 transition-colors" aria-label="Instagram"><InstagramLogo size={14} weight="bold" /></a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-400 transition-colors" aria-label="LinkedIn"><LinkedinLogo size={14} weight="bold" /></a>
-          <a href="tel:+27818337553" className="sm:hidden text-gray-500 hover:text-white transition-colors" aria-label="Call"><Phone size={14} weight="bold" /></a>
-        </div>
-      </div>
+    <div
+      id="demo-banner"
+      className="relative z-[60] text-center text-xs py-2 px-8"
+      style={{
+        backgroundColor: '#1a1a2e',
+        color: '#e0e0e0',
+      }}
+    >
+      <span className="font-medium">
+        Demo by{' '}
+        <a
+          href="mailto:admin@bitstudio.co.zw"
+          className="underline font-bold transition-colors"
+          style={{ color: '#e5af3e' }}
+          onMouseEnter={(e) => (e.target.style.color = '#f5c542')}
+          onMouseLeave={(e) => (e.target.style.color = '#e5af3e')}
+        >
+          Bit Studio
+        </a>
+        {' '}&mdash; Want a site like this?{' '}
+        <a
+          href="mailto:admin@bitstudio.co.zw"
+          className="underline transition-colors"
+          style={{ color: '#e5af3e' }}
+          onMouseEnter={(e) => (e.target.style.color = '#f5c542')}
+          onMouseLeave={(e) => (e.target.style.color = '#e5af3e')}
+        >
+          Get in touch
+        </a>
+      </span>
+      <button
+        onClick={() => setDismissed(true)}
+        className="absolute right-2 top-1/2 -translate-y-1/2 p-1 transition-colors"
+        style={{ color: '#999' }}
+        onMouseEnter={(e) => (e.target.style.backgroundColor = 'rgba(255,255,255,0.1)')}
+        onMouseLeave={(e) => (e.target.style.backgroundColor = 'transparent')}
+        aria-label="Dismiss banner"
+      >
+        <X size={14} />
+      </button>
     </div>
   );
 }

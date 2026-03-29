@@ -451,6 +451,106 @@ const siteData = {
       { name: "Chiedza Mapondera", image: "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?w=100&h=100&fit=crop&crop=face", role: "School Administrator", text: "Wonderful experience. The team was courteous, professional, and efficient.", rating: 5, date: "2024-12-10", projectType: "Institutional" },
     ],
   },
+  careers: {
+    heroTitle: [
+      { text: "Join " },
+      { text: "Koopfurn.", highlight: true },
+    ],
+    heroSubtitle:
+      "We are building a team of design-obsessed professionals who believe furniture should be extraordinary. If that resonates, we want to hear from you.",
+    heroImage: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1920&q=80",
+    cultureTitle: "Why Work With Us?",
+    cultureItems: [
+      {
+        iconName: "Star",
+        title: "Work With Premium Products",
+        desc: "Handle and present world-class furniture every day. If you appreciate fine craftsmanship, this is your environment.",
+      },
+      {
+        iconName: "Rocket",
+        title: "Career Growth",
+        desc: "From showroom associate to design consultant to management. We promote from within and invest in your development.",
+      },
+      {
+        iconName: "Heart",
+        title: "Creative Environment",
+        desc: "Work in a beautifully designed showroom surrounded by inspiring pieces. No cubicles, no fluorescent lights.",
+      },
+    ],
+    cultureImage: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80",
+    cultureImageAlt: "Koopfurn showroom and team workspace",
+    cultureTagline: "Not Just Furniture. A Lifestyle.",
+    cultureTaglineDesc:
+      "Our team does not just sell furniture. We curate spaces, build relationships, and help clients create homes they are proud of. That takes passion.",
+    benefits: [
+      { iconName: "CurrencyDollar", title: "Competitive Salary", desc: "Industry-leading base salary plus commission on design consultations and sales." },
+      { iconName: "GraduationCap", title: "Design Training", desc: "Ongoing training in interior design principles, material science, and client consultation." },
+      { iconName: "Heart", title: "Staff Discount", desc: "Generous employee discount on all Koopfurn furniture collections." },
+      { iconName: "Users", title: "Small Team Culture", desc: "Close-knit team with regular socials, team lunches, and collaborative projects." },
+      { iconName: "ShieldCheck", title: "Medical Aid", desc: "Comprehensive medical aid contribution for you and your dependents." },
+      { iconName: "Star", title: "Showroom Perks", desc: "Work in a premium environment with complimentary refreshments and a beautiful workspace." },
+    ],
+    positions: [
+      {
+        id: 1,
+        title: "Design Consultant",
+        department: "Sales & Design",
+        type: "Full-Time",
+        location: "Johannesburg",
+        description:
+          "Work directly with clients to select furniture for residential and commercial projects. Requires a strong eye for design, excellent communication, and a passion for premium products.",
+        requirements: [
+          "2+ years in furniture sales or interior design",
+          "Strong understanding of design principles and spatial planning",
+          "Excellent client communication and presentation skills",
+          "Proficiency in basic design software (SketchUp, Canva, or similar)",
+          "Driver's licence for client site visits",
+        ],
+      },
+      {
+        id: 2,
+        title: "Showroom Manager",
+        department: "Operations",
+        type: "Full-Time",
+        location: "Johannesburg",
+        description:
+          "Oversee daily showroom operations, manage the sales team, maintain visual merchandising standards, and ensure an exceptional client experience.",
+        requirements: [
+          "3+ years in retail management, preferably furniture or luxury retail",
+          "Strong leadership and team management skills",
+          "Visual merchandising experience",
+          "Inventory management and reporting capabilities",
+          "Passion for premium furniture and design",
+        ],
+      },
+      {
+        id: 3,
+        title: "Delivery & Installation Specialist",
+        department: "Logistics",
+        type: "Full-Time",
+        location: "Johannesburg",
+        description:
+          "Handle white-glove delivery and installation of furniture. Assemble pieces on-site, ensure client satisfaction, and maintain our premium delivery standard.",
+        requirements: [
+          "Experience in furniture assembly and installation",
+          "Valid driver's licence with clean record",
+          "Physically capable of lifting and moving heavy items",
+          "Professional appearance and client-facing manner",
+          "Attention to detail and care for premium products",
+        ],
+      },
+    ],
+    generalApplicationTitle: "Passionate About Design?",
+    generalApplicationSubtitle:
+      "We are always looking for talented, design-minded individuals. Send us your CV even if you do not see a role that fits perfectly.",
+    generalApplicationCta: "Send Your CV",
+  },
+
+  footer: {
+    description:
+      "South Africa's destination for luxury furniture. Meticulously crafted pieces that transform spaces into statements.",
+    copyright: "Koopfurn Premium Furniture (Pty) Ltd",
+  },
 };
 
 export default siteData;

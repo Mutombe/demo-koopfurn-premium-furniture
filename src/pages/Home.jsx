@@ -156,7 +156,7 @@ function HeroSection() {
                 className={`font-heading leading-[0.85] tracking-tight ${
                   word === '/' ? 'text-white/15 font-light' : 'text-white font-bold'
                 }`}
-                style={{ fontSize: word === '/' ? 'clamp(2rem, 8vw, 6rem)' : 'clamp(3rem, 12vw, 10rem)' }}
+                style={{ fontSize: word === '/' ? 'clamp(2rem, 7vw, 4.5rem)' : 'clamp(3rem, 7vw, 4.5rem)' }}
               >
                 {word}
               </h1>
@@ -471,7 +471,7 @@ function HorizontalGallery() {
           <div>
             <div className="w-10 h-[1px] bg-black mb-8" />
             <p className="text-black/25 text-[11px] uppercase tracking-[0.35em] mb-4 font-light">Portfolio</p>
-            <h2 className="font-heading font-bold text-black leading-[0.92]" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
+            <h2 className="font-heading font-bold text-black leading-[0.92]" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)' }}>
               CURATED <span className="text-black/15">SPACES</span>
             </h2>
           </div>
@@ -707,7 +707,7 @@ function CTASection() {
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.9 }}
         >
-          <h2 className="font-heading font-bold text-white leading-[0.88] mb-10" style={{ fontSize: 'clamp(2.5rem, 8vw, 7rem)' }}>
+          <h2 className="font-heading font-bold text-white leading-[0.88] mb-10" style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)' }}>
             YOUR SPACE<br />
             <span className="text-white/20">DESERVES</span> BETTER.
           </h2>
